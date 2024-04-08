@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.MallDAO">
+   <!-- Q&A -->
+   <select id="list" resultType="com.himedia.shopping.DTO.PersonDTO">
+      SELECT id,title,cont,writer,created from G_QNA order by created desc 
+   </select>
+   
+   <!--  추가  -->
+   <insert id="G_insert">
+         INSERT INTO G_QNA set title=#{param1}, cont=#{param2} ,writer=#{param3},created=sysdate()
+   </insert>
+   
+   <!--  수정하러 이동하기 -->
+   <select id="G_view" resultType="com.himedia.shopping.DTO.PersonDTO">
+   SELECT id,title,cont,writer from G_QNA where id=#{param1}
+</select>
+   
+   
+<!--  삭제  -->
+<delete id="G_remove">
+delete from G_QNA where id=#{param1}
+</delete>
+
+<!--  수정  -->
+<update id="G_modi">
+   update G_QNA set title=#{param2}, cont=#{param3}, writer=#{param4} where id=#{param1}
+</update>
+
+   <!--  QnA답변보기 -->
+<select id="G_QnA_AnswerView" resultType="com.himedia.shopping.DTO.PersonDTO">
+   select b.id,author,content 
+   from g_qna a , g_answer b
+   where a.id=b.post_id
+   and a.id=#{param1}
+   order by created desc 
+</select>
+
+
+<!--  QnA답변추가 -->
+<insert id="G_QnA_AnswerInsert">
+INSERT INTO G_Answer set post_id=#{param1}, author=#{param2}, content=#{param3} ,created_at=sysdate()
+</insert>
+   
+   
+<!--  QnA답변삭제 -->
+<delete id="G_QnA_Answerdel">
+delete from G_Answer where id=#{param1}
+</delete>
+   
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.paymentsDAO">
+
+<!-- 결제 성공시에만 db내 테이블 저장 -->
+    <insert id="addpayments">
+        INSERT INTO payments set
+       userid=#{param1},orderName=#{param2},amount=#{param3},payment_method=#{param4},order_time=sysdate()
+    </insert>
+    
+</mapper>

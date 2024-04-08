@@ -1,0 +1,103 @@
+@charset "EUC-KR";
+	body {
+	    font-family: 'Roboto', sans-serif;
+	    background-color: #f4f4f4;
+	    padding: 20px;
+	    padding-bottom: 80px;
+	    font-family: 'Nanum Pen Script', sans-serif;
+		font-size: 20px;
+	}
+	
+	#wrap {
+	    min-height: 100%;
+	    position: relative;
+	    padding-bottom: 60px;
+	}
+    .cart-container {
+        max-width: 1000px;
+        background: #fff;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+    .cart-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+    }
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+    th {
+        background-color: #fafafa;
+        color: #333;
+    }
+    td{
+    	font-size:30px;
+    }
+    .product-image {
+        width: 80px;
+        height: auto;
+        border-radius: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: #435ea8;
+    }
+    button{
+    	border: none;
+    	background-color: white;
+    	font-size: 20px;
+    	color: #617893; 
+    }
+	.bn632-hover {
+	  width: 160px;
+	  font-size: 16px;
+	  font-weight: 600;
+	  color: #fff;
+	  cursor: pointer;
+	  margin: 20px;
+	  height: 55px;
+	  text-align:center;
+	  border: none;
+	  background-size: 300% 100%;
+	  border-radius: 50px;
+	  moz-transition: all .4s ease-in-out;
+	  -o-transition: all .4s ease-in-out;
+	  -webkit-transition: all .4s ease-in-out;
+	  transition: all .4s ease-in-out;
+	  margin-left: 800px;
+	}
+	
+	.bn632-hover:hover {
+	  background-position: 100% 0;
+	  moz-transition: all .4s ease-in-out;
+	  -o-transition: all .4s ease-in-out;
+	  -webkit-transition: all .4s ease-in-out;
+	  transition: all .4s ease-in-out;
+	}
+	
+	.bn632-hover:focus {
+	  outline: none;
+	}
+	
+	.bn632-hover.bn26 {
+	  background-image: linear-gradient(
+	    to right,
+	    #25aae1,
+	    #4481eb,
+	    #04befe,
+	    #3f86ed
+	  );
+	  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+	}

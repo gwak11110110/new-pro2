@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.MallDAO">
+	  <!-- 로그인 -->
+    <select id="doLogin" resultType="_int">
+       SELECT count(*) as cnt FROM signup WHERE userid=#{param1} and passwd=#{param2}
+   </select>
+   
+      <select id="adLogin" resultType="_int">
+       SELECT count(*) as cnt FROM signup WHERE userid=#{param1} and passwd=#{param2} and admin="1"
+   </select>
+	
+	<!-- 회원가입 -->
+   <insert id="save">
+         INSERT INTO signup set 
+               userid=#{param1},passwd=#{param2},
+               passwordcheck=#{param3},name=#{param4},
+               birth=#{param5},email=#{param6},phone=#{param7}
+   </insert>
+   <select id="s_view" resultType="com.himedia.shopping.DTO.SignupDTO">
+         SELECT userid,passwd,passwordcheck,name,birth,email,phone from signup where userid=#{param1}
+   </select>
+   
+   <delete id="s_delete">
+   		delete from signup where userid = #{param1}
+   </delete>
+   
+   <update id="modify1">
+       UPDATE signup 
+       SET passwd=#{param2}, passwordcheck=#{param3}, name=#{param4}, birth=#{param5}, email=#{param6}, phone=#{param7} 
+       WHERE userid=#{param1}
+   </update>
+   
+    <select id="useridExists" resultType="java.lang.Boolean">
+        SELECT COUNT(*) > 0 FROM signup WHERE userid = #{param1}
+    </select>
+    
+        <select id="emailExists" resultType="java.lang.Boolean">
+        SELECT COUNT(*) > 0 FROM signup WHERE email = #{param1}
+    </select>
+
+	
+</mapper>

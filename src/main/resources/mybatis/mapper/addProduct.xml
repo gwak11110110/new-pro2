@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.MallDAO">
+    
+    <!-- 제품등록 -->
+    <insert id="addPro">
+        insert into addProduct set
+	        p_name=#{param1},
+	        p_price=#{param2},
+	        description=#{param3},
+	        image_path=#{param4},
+	        image_path2=#{param5},
+	        image_path3=#{param6},
+	        image_path4=#{param7},
+	        image_path5=#{param8},
+	        <!-- category_id=#{param9}, -->
+	        product_inventory=#{param9},
+	        description1 = #{param10},
+	        description2 = #{param11}
+    </insert>   
+    <!-- 제품 조회 -->
+    <select id="prolist" resultType="com.himedia.shopping.DTO.ProductDTO">
+        SELECT productid, p_name, p_price, description, image_path,image_path2,image_path3,image_path4,image_path5,
+        	product_inventory, description1, description2 FROM addProduct order by productid desc
+    </select>
+    
+    <!-- 제품 수정 -->
+    <update id="modify">
+    	UPDATE addProduct SET p_name=#{param2}, p_price=#{param3},
+    						description=#{param4}, image_path=#{param5},
+    						image_path2=#{param6}, image_path3=#{param7},
+    						image_path4=#{param8}, image_path5=#{param9}, 
+    						<!-- category_id=#{param10}, --> product_inventory=#{param10},
+    						description1 = #{param11}, description2= #{param12} where productid = #{param1}
+    </update>
+    
+    <!-- 제품 삭제 -->
+    <delete id="remove">
+    	delete from addProduct where productid = #{param1}
+    </delete>
+    
+    <select id="listal" resultType="com.himedia.shopping.DTO.ProductDTO">
+   		SELECT productid,
+				p_name, p_price, description, image_path, image_path2,
+				image_path3, image_path4, image_path5, product_inventory, description1, description2
+				from addProduct where productid=#{param1}
+	</select>
+    
+    <!-- 모든 상품 조회 -->
+    <select id="view" resultType="com.himedia.shopping.DTO.addProductDTO">
+      	SELECT productid, image_path, image_path2, image_path3, image_path4, image_path5, p_name, p_price FROM addproduct
+   	</select>
+   	
+        <!-- 제품 검색 -->
+    <select id="find" resultType="com.himedia.shopping.DTO.addProductDTO">
+         SELECT  productid,image_path, p_price ,p_name FROM addproduct WHERE addproduct.p_name LIKE #{param1}
+      </select>
+   	
+   	<!-- 상세조회 -->
+    <select id="dlist" resultType="com.himedia.shopping.DTO.ProductDTO">
+        SELECT productid, p_name, p_price, description, image_path,image_path2,image_path3,image_path4,image_path5, product_inventory, description1,
+        description2 FROM addProduct
+    </select>
+   	
+</mapper>

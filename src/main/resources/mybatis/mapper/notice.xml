@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.noticeDAO">
+   <select id="notice" resultType="com.himedia.shopping.DTO.noticeDTO">
+      SELECT id,n_title,n_cont,n_image,n_writer,created from notice order by id desc
+   </select>
+   <insert id="insert2">
+    INSERT INTO notice set n_title=#{param1},n_cont=#{param2},n_image=#{param3},n_writer=#{param4},created=sysdate()
+   </insert>
+   <select id="n_view" resultType="com.himedia.shopping.DTO.noticeDTO">
+   SELECT id,n_title,n_cont,n_image,n_writer from notice where id=#{param1}
+</select>
+<delete id="remove">
+   delete from notice where id =#{param1}
+</delete>
+<update id="modify">
+update notice set n_title=#{param2},n_cont=#{param3},n_image=#{param4},n_writer=#{param5},created=sysdate() where id =#{param1}
+</update>
+
+</mapper>

@@ -1,0 +1,58 @@
+@charset "EUC-KR";
+ body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+        color: #495057;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;       
+    }
+
+    form {
+        width: auto;
+        margin: auto;
+    }
+
+    h1 {
+        color: #617893;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #617893;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        width: 50%; 
+        padding: 10px; 
+        margin-bottom: 10px;
+        box-sizing: border-box; 
+    }
+
+    input[type="submit"] {
+        width: 200px;
+        padding: 10px;
+        background-color: #617893;
+        border-radius: 4px;
+        border: 1px solid #ffffff;
+        color: white;
+        cursor: pointer;
+        margin: 0 auto; 
+        display: block;
+    }
+
+    .select_img {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .select_img img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }

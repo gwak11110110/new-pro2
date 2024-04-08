@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.reviewDAO">
+   <select id="review" resultType="com.himedia.shopping.DTO.reviewDTO">
+       SELECT r_id,p_id,r_title,r_cont,r_image,r_star,r_writer,a.created from review a, addProduct b where a.p_id=b.productid
+      <!--SELECT productid,r_id,r_title,r_cont,r_image,r_star,r_writer,a.created from review a,signup b, addproduct c where a.r_writer=b.userid-->
+   </select>
+   <insert id="insert">
+    INSERT INTO review set p_id=#{param1}, r_title=#{param2}, r_cont=#{param3}, r_image=#{param4},r_star=#{param5}, r_writer=#{param6},created=sysdate()
+   </insert>
+<delete id="remove">
+   delete from review where r_id =#{param1}
+</delete>
+<update id="modify">
+update review set p_id=#{param2}, r_title=#{param3}, r_cont=#{param4}, r_image=#{param5},r_star=#{param6}, r_writer=#{param7},created=sysdate() where  r_id =#{param1}
+</update>
+</mapper> 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himedia.shopping.DAO.MallDAO">
+    <!-- 장바구니 -->
+   	<select id="cartList" resultType="com.himedia.shopping.DTO.cartDTO">
+   		select orderid, userid, p_name, p_price, amount, numcnt, image_path from cart
+   	</select>
+   	<insert id="cartadd">
+   		INSERT INTO cart SET userid=#{param1}, p_name=#{param2}, p_price=#{param3},
+   							amount=#{param4}, numcnt=#{param5}, image_path=#{param6}
+   	</insert>
+   	<!-- 장바구니 userid확인 -->
+   	<select id="userCartList" resultType="com.himedia.shopping.DTO.cartDTO">
+    	SELECT * FROM cart WHERE userid = #{param1} order by orderid desc
+	</select>
+	<!-- 장바구니 삭제 -->
+	<delete id="cartRemove">
+		DELETE FROM cart WHERE orderid = #{param1}
+	</delete>
+   	
+   	<!-- 결제 후 장바구니 삭제 -->
+   <delete id="orderDelete">
+      DELETE FROM cart WHERE orderid = #{param1}
+   </delete>
+	
+</mapper>

@@ -1,0 +1,72 @@
+@charset "EUC-KR";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #617893;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #617893;
+}
+form {
+    text-align: left; /* 폼 내의 모든 항목을 왼쪽 정렬 */
+    width: auto; /* 폼의 너비를 자동으로 조정 */
+    margin-left: 20px; /* 페이지의 왼쪽 가장자리로부터의 마진 */
+}
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 50%; /* 입력 필드 너비를 50%로 조정 */
+    max-width: 400px; /* 입력 필드의 최대 너비를 400px로 설정 */
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #617893;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #495b70;
+}
+
+a {
+    text-decoration: none;
+    color: #617893;
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid #617893;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #617893;
+    color: white;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

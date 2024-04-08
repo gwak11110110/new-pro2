@@ -1,0 +1,188 @@
+
+/* 기본 스타일 */
+    body {
+        font-family: 'Nanum Pen Script', sans-serif;
+		font-size: 20px;
+        margin: 0; /* body 요소의 바깥 여백 제거 */
+        padding: 0; /* body 요소의 안쪽 여백 제거 */
+    }
+
+    nav {
+          background-color: #ffffff; /* 네비게이션의 배경색 설정 */
+        color: #1e1025; /* 네비게이션의 텍스트 색상 설정 */
+        padding: 10px; /* 네비게이션의 안쪽 여백 설정 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+    }
+
+    nav ul {
+        margin: 0; /* ul 요소의 바깥 여백 제거 */
+        padding: 0; /* ul 요소의 안쪽 여백 제거 */
+        list-style-type: none; /* 리스트의 기본 스타일 제거 */
+    }
+
+    nav ul li {
+        display: inline; /* 리스트 항목을 가로로 배치 */
+        margin-right: 20px; /* 리스트 항목 간의 오른쪽 여백 설정 */
+    }
+
+    .link {
+        color: #ffffff; /* 링크의 텍스트 색상 설정 */
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        font-weight: bold; /* 링크의 글꼴 굵기 설정 */
+        font-size: 18px; /* 링크의 글꼴 크기 설정 */
+         color: #1e1025; /* 링크의 텍스트 색상을 네비게이션 텍스트 색상과 동일하게 설정 */
+
+    }
+
+    /* 테이블 관련 스타일 */
+    .table1, .table2, .table3 {
+        width: 100%; /* 테이블의 너비를 부모 요소에 맞춤 */
+        border-collapse: collapse; /* 테이블 셀 경계를 합침 */
+    }
+
+    th, td {
+        padding: 10px; /* 테이블 셀의 안쪽 여백 설정 */
+        text-align: left; /* 텍스트를 왼쪽 정렬 */
+        border-bottom: 1px solid #ccc; /* 테이블 셀 아래에 회색 선 추가 */
+    }
+
+    .th {
+        background-color: #495d74; /* 테이블 헤더의 배경색 설정 */
+        color: #fff; /* 테이블 헤더의 텍스트 색상 설정 */
+        font-weight: bold; /* 테이블 헤더의 글꼴 굵기 설정 */
+    }
+
+    /* 기타 요소 스타일 */
+    .divm {
+        margin-top: 20px; /* 요소 상단 여백 설정 */
+    }
+
+    .div1 {
+        margin-bottom: 20px; /* 요소 하단 여백 설정 */
+    }
+
+    .div2, .div3 {
+        padding: 20px; /* 요소 안쪽 여백 설정 */
+        background-color: #fff; /* 요소의 배경색 설정 */
+        margin-bottom: 20px; /* 요소의 하단 여백 설정 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    }
+
+    select, input[type="text"], button {
+        padding: 10px; /* 선택상자, 텍스트 입력 필드, 버튼의 안쪽 여백 설정 */
+        margin-right: 10px; /* 선택상자, 텍스트 입력 필드, 버튼의 오른쪽 여백 설정 */
+        border: none; /* 테두리 제거 */
+        border-radius: 5px; /* 모서리 둥글게 설정 */
+        font-size: 16px; /* 글꼴 크기 설정 */
+    }
+
+    #cat {
+        width: 150px; /* 선택상자의 너비 설정 */
+    }
+
+    #serch {
+        width: 250px; /* 텍스트 입력 필드의 너비 설정 */
+        border: 2px solid;
+        
+    }
+
+    #serchm {
+        padding: 10px 20px; /* 버튼의 안쪽 여백 설정 */
+        background-color: #495d74; /* 버튼의 배경색 설정 */
+        color: #fff; /* 버튼의 텍스트 색상 설정 */
+        cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+        border-radius: 5px; /* 모서리 둥글게 설정 */
+        font-size: 16px; /* 버튼의 글꼴 크기 설정 */
+        border: none; /* 테두리 제거 */
+        text-decoration: none;
+    }
+
+    #serchm:hover {
+        background-color: #ffc0cb; /* 마우스를 올렸을 때의 배경색 설정 */
+    }
+    .logo-container {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 20px 0; /* 위아래 여백 추가 */
+	}
+	
+	.logo-container h1 {
+	    font-family: 'Nanum Pen Script', sans-serif; /* 로고에 사용할 폰트 */
+	    font-size: 36px; /* 로고의 크기 */
+	    color: #1e1025; /* 로고의 색상 */
+	}
+	.bn54 {
+	  position: relative;
+	  outline: none;
+	  text-decoration: none;
+	  border-radius: 50px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  cursor: pointer;
+	  text-transform: uppercase;
+	  height: 45px;
+	  width: 130px;
+	  opacity: 1;
+	  background-color: #ffffff;
+	  border: 1px solid rgba(0, 0, 0, 0.6);
+	  text-decoration: none;
+	  
+	}
+	
+	.bn54 .bn54span {
+	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  color: #000000;
+	  font-size: 12px;
+	  font-weight: 500;
+	  letter-spacing: 0.7px;
+	}
+	
+	.bn54:hover {
+	  animation: bn54rotate 0.7s ease-in-out both;
+	}
+	
+	.bn54:hover .bn54span {
+	  animation: bn54storm 0.7s ease-in-out both;
+	  animation-delay: 0.06s;
+	}
+	
+	@keyframes bn54rotate {
+	  0% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	  25% {
+	    transform: rotate(3deg) translate3d(0, 0, 0);
+	  }
+	  50% {
+	    transform: rotate(-3deg) translate3d(0, 0, 0);
+	  }
+	  75% {
+	    transform: rotate(1deg) translate3d(0, 0, 0);
+	  }
+	  100% {
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes bn54storm {
+	  0% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
+	  25% {
+	    transform: translate3d(4px, 0, 0) translateZ(0);
+	  }
+	  50% {
+	    transform: translate3d(-3px, 0, 0) translateZ(0);
+	  }
+	  75% {
+	    transform: translate3d(2px, 0, 0) translateZ(0);
+	  }
+	  100% {
+	    transform: translate3d(0, 0, 0) translateZ(0);
+	  }
+	}
+	.login-button-container {
+	    display: flex; /* Flexbox 레이아웃 사용 */
+	    justify-content: center; /* 가로축을 기준으로 중앙 정렬 */
+	    margin: 20px 0; /* 위아래 여백 추가 */
+	}
